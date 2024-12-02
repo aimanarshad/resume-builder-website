@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #ebbc86;
+        }
+
+        #heading4 {
+            color: rgb(139, 16, 16);
+            font-size: 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .info4 input[type="text"], .info4 input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 4px solid #9c5526;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .info4 label {
+            color: #160202;
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .skill-section {
+            margin-top: 25px;
+        }
+
+        .cert-section {
+            margin-top: 25px;
+        }
+
+        .add-skill-btn {
+            background-color: rgb(148, 45, 45);
+            color: #daaa29;
+            border: 2px solid rgb(133, 66, 3);
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            float: right;
+            padding-bottom: 10px 20px;
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .add-skill-btn:hover {
+            background-color: rgb(39, 28, 187);
+        }
+
+        #nexts {
+            background-color: rgb(148, 45, 45);
+            color: #daaa29;
+            border: 2px solid rgb(133, 66, 3);
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            float: right;
+            padding-bottom: 10px 20px;
+            width: 100px;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        #nexts a {
+            text-decoration: none;
+            color: #daaa29;
+            font-size: 15px;
+        }
+
+        #nexts:hover {
+            background-color: rgb(39, 28, 187);
+        }
+
+        .project-section {
+            margin-top: 30px;
+            border: 2px solid #9c5526;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(139, 16, 16);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="heading4">Skills & Projects</h3>
+    
+    <div class="b">
+        <div class="info4">
+
+            <!-- Technical Skills Section -->
+            <div class="section-title">Technical Skills</div>
+            <div class="skill-section">
+                <label for="tech-skill1">Skill 1</label>
+                <br>
+                <input type="text" name="tech-skill1" id="tech-skill1" placeholder="e.g., HTML, JavaScript, etc.">
+                <br>
+                <label for="tech-proficiency1">Proficiency (%)</label>
+                <br>
+                <input type="number" name="tech-proficiency1" id="tech-proficiency1" placeholder="e.g., 85">
+            </div>
+
+            <div class="skill-section">
+                <label for="tech-skill2">Skill 2</label>
+                <br>
+                <input type="text" name="tech-skill2" id="tech-skill2" placeholder="e.g., CSS, Python, etc.">
+                <br>
+                <label for="tech-proficiency2">Proficiency (%)</label>
+                <br>
+                <input type="number" name="tech-proficiency2" id="tech-proficiency2" placeholder="e.g., 90">
+            </div>
+
+            <!-- Soft Skills Section -->
+            <div class="section-title">Soft Skills</div>
+            <div class="skill-section">
+                <label for="soft-skill1">Skill 1</label>
+                <br>
+                <input type="text" name="soft-skill1" id="soft-skill1" placeholder="e.g., Leadership, Teamwork">
+                <br>
+            </div>
+
+            <div class="skill-section">
+                <label for="soft-skill2">Skill 2</label>
+                <br>
+                <input type="text" name="soft-skill2" id="soft-skill2" placeholder="e.g., Communication, Problem-solving">
+                <br>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="section-title">Languages</div>
+            <div class="skill-section">
+                <label for="language1">Language 1</label>
+                <br>
+                <input type="text" name="language1" id="language1" placeholder="e.g., English">
+                <br>
+                <label for="lang-proficiency1">Proficiency Level</label>
+                <br>
+                <input type="text" name="lang-proficiency1" id="lang-proficiency1" placeholder="e.g., Fluent, Intermediate">
+            </div>
+
+            <div class="skill-section">
+                <label for="language2">Language 2</label>
+                <br>
+                <input type="text" name="language2" id="language2" placeholder="e.g., Spanish">
+                <br>
+                <label for="lang-proficiency2">Proficiency Level</label>
+                <br>
+                <input type="text" name="lang-proficiency2" id="lang-proficiency2" placeholder="e.g., Beginner, Fluent">
+            </div>
+
+            <!-- Project Section -->
+            <div class="section-title">Project</div>
+            <div class="project-section">
+                <label for="project-title">Project Title</label>
+                <br>
+                <input type="text" name="project-title" id="project-title" placeholder="e.g., Portfolio Website">
+                <br><br>
+                
+                <label for="project-description">Description</label>
+                <br>
+                <textarea name="project-description" id="project-description" rows="4" placeholder="Brief explanation of the project"></textarea>
+                <br><br>
+                
+                <label for="project-skills">Skills/Technologies Used</label>
+                <br>
+                <input type="text" name="project-skills" id="project-skills" placeholder="e.g., HTML, CSS, JavaScript">
+            </div>
+
+            <br><br>
+            <button id="nexts"><a href="experience.html">Next: Experience</a></button>
+        </div>
+    </div>
+</body>
+</html>

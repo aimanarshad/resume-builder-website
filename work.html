@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #ebbc86;">
+    
+    <h2 style="color: rgb(139, 16, 16);font-size: 30px; text-transform: uppercase;text-align: center; font-weight: bold;" >Work history
+        
+    </h2>
+    <p>We'll start there and work backward</p>
+    
+    <p style="color: rgb(150, 69, 11);">* indicates a required field</p>
+    <div class="b">
+        <div class="job">
+            <label for="job">Job</label>
+            <br>
+            <input type="text" name="job" id="job title" placeholder="eg.Accountant">
+            <br>
+            <label for="project-description">Description</label>
+                <br>
+                <textarea name="project-description" id="project-description" rows="4" placeholder="Brief explanation of the project"></textarea>
+                <br><br>
+            <label for="Employment">Employment</label>
+            <br>
+            <input type="text" name="employer" id="employer" placeholder="eg. Best Business solutions">
+            <br>
+            <div class="loc">
+            <br>
+            <label for="location">Location</label>
+            <br>
+            <input type="text" name="location" id="location" placeholder="eg.Swabi">
+            <br>
+            <input type="checkbox" name="Remote" id="Remote">Remote
+        </div>
+        <br>
+        <div class="data">
+            <label for="month">Start Date</label>
+            <input type="month" name="start-date"><br>
+        
+        <label for="end month">End Date</label>
+        <input type="month" name="end-date"><br>
+        
+        
+        
+        <input type="checkbox" name="currently" id="currently">I currently work here
+        
+        
+    </div>
+    <div class="btn-submit">
+        <button >Submit</button>
+    </div>
+        <button id="Preview">Add Another Job</button>
+
+         <button id="next"><a href="education.html">Next Education </a></button>
+
+    </div>
+</div>
+<script>
+     document.getElementById("Preview").addEventListener("click", function() {
+        // Get the work history container
+        var container = document.querySelector(".b");
+
+        // Clone the first work entry (the job div)
+        var newEntry = container.querySelector(".job").cloneNode(true);
+
+        // Reset the input values in the cloned entry
+        newEntry.querySelectorAll("input, textarea").forEach(function(input) {
+            input.value = "";  // Clear the value
+            input.checked = false;  // Clear any checkboxes
+        });
+
+        // Append the cloned entry to the container
+        container.appendChild(newEntry);
+    });
+</script>
+</body>
+</html>

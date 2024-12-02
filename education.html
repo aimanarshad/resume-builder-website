@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body{
+            background-color: #ebbc86;
+        }
+        section-title{
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(139, 16, 16);
+            margin-top: 20px;
+        }
+        
+
+    </style>
+
+</head>
+<body >
+    <h3 id="heading3">Level of Education</h3>
+    <div class="b">
+    <div class="info3">
+    <div class="degree">
+        <div class="section-title">Degree Earned</div>
+        <br>
+        <label >Degree(s) Earned:</label>
+        <br>
+        <input type="text" name="degree" id="degree" placeholder="eg.Bachelors of Science">
+        <br>
+        
+        <label for="Major">What your option</label>
+      
+        <select name="option">
+            
+            <option value="Major">Major</option>
+            <option value="Minor">Minor</option>
+        </select>
+    </div>
+    <div class="section-title">School Ot University</div>
+    <div class="insitute">
+        
+        <div class="school">
+        <label for="School">School/University name</label>
+        <br>
+        <input type="text" name="school" id="school" placeholder="eg.University of Karachi">
+        <br>
+        <label for="location">Location</label>
+        <br>
+        
+        <input type="text" name="loc" id="loca" placeholder="eg.karachi">
+        <br>
+        <label for="start-date">Start Date:</label>
+        <br>
+        <input type="date" name="start-date" id="start-date">
+        
+        <label for="end Data">End Date:</label>
+        
+        <input type="date" name="end-date" id="end-date">
+    </div>
+    <div class="certifiication">
+        <div class="section-title">Certification</div>
+        <br>
+        <label for="certicate-name">Certificate Name</label>
+        <br>
+        <input type="text" name="certicate-name" id="certicate-name" placeholder="eg.Certified Analyst">
+       <br>
+        <label for="Organization">Issuing Organization</label>
+       <br>
+        <input type="text" name="Organization" placeholder="eg.coursera">
+
+       <div class="uploadImg">
+        
+        <form>
+            <label for="img">Upload your cerficate/degree</label>
+            <br><br>
+            <input type="file" accept="image/*" id="imageUpload" />
+            <br /><br />
+            <img
+              id="imagePreview"
+              src=""
+              alt="Image Preview"
+              style="max-width: 300px; display: none"
+            />
+          </form>
+          
+       </div>
+
+    </div>
+</div>
+<button id="submitBtn">Submit</button>
+<button id="Preview">Add Another Education</button>
+ <button id="nexts"><a href="skill.html">Next Skills </a></button> 
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr("#start-date" , {
+    dateFormat: "d/m/Y",  // Custom date format (dd/mm/yyyy)
+    defaultDate: "today"
+    });
+    flatpickr("#end-date" , {
+    dateFormat: "d/m/Y",  // Custom date format (dd/mm/yyyy)
+    defaultDate: "today"
+    });
+  const imageUpload = document.getElementById("imageUpload");
+  const imagePreview = document.getElementById("imagePreview");
+
+  imageUpload.addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+  document.getElementById("Preview").addEventListener("click", function() {
+  // Get the first education block (info3)
+  const firstEntry = document.querySelector(".info3");
+
+  // Clone it
+  const newEntry = firstEntry.cloneNode(true);
+
+  // Reset all the input values in the new entry
+  newEntry.querySelectorAll("input, select").forEach(function(input) {
+      input.value = "";
+  });
+
+  // Append the cloned entry to the main container (.b)
+  document.querySelector(".b").appendChild(newEntry);
+});
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
